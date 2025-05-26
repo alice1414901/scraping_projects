@@ -66,8 +66,8 @@ def scrape():
                     big_l.append(small_l)
     return big_l
 
-scrape()
-
 #data frame 
+data = scrape()
 my_columns=["organisation", "location", "grant", "eligibility", "status", "deadline", "url"]
 df = pd.DataFrame(data, columns=my_columns)
+df.to_csv("funding_data.csv")
