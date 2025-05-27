@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 import re
 
-#function to find the number of pages and generate the required URLs 
+#function to find the number of pages
 def num_of_pages():
     url = "https://hubcymruafrica.wales/funding/page/3/"
     my_headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"}
@@ -14,6 +14,7 @@ def num_of_pages():
     max_page = int(button.split("of")[1].strip())
     return max_page
 
+#function to generate the required URLs 
 def root_pages():
     max_page = num_of_pages()
     urls = []
